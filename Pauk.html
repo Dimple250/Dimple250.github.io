@@ -100,6 +100,18 @@ div{
 				<img src="Karts\Rubashka.png" style="top:10px;"/>
 				<img src="Karts\Rubashka.png" style="top:20px;"/>
 				<img src="Karts\Rubashka.png" style="top:30px;"/>
+				<img src="Karts\K(t).png" style="top:40px;"/>
+				<img src="Karts\Q(t).png" style="top:50px;"/>
+				<img src="Karts\J(t).png" style="top:60px;"/>
+				<img src="Karts\D(t).png" style="top:70px;"/>
+				<img src="Karts\9(t).png" style="top:80px;"/>
+				<img src="Karts\8(t).png" style="top:90px;"/>
+				<img src="Karts\7(t).png" style="top:100px;"/>
+				<img src="Karts\6(t).png" style="top:110px;"/>
+				<img src="Karts\5(t).png" style="top:120px;"/>
+				<img src="Karts\4(t).png" style="top:130px;"/>
+				<img src="Karts\3(t).png" style="top:140px;"/>
+				<img src="Karts\2(t).png" style="top:150px;"/>
 		</div>
 		
 		<div id="Add"> 
@@ -274,6 +286,7 @@ div{
 			
 			kolkart=0;
 			q=0;
+			
 			function Proverka(Block){
 				num=0;
 					kol1=0;
@@ -303,6 +316,7 @@ div{
 					}
 				}
 				p=12;
+				num=0;
 				for(j=0;j<=Block.children.length-1;j++){
 						if(T2[13].test(Block.children[j].src)){num=j;kol2++;}
 					}
@@ -328,7 +342,6 @@ div{
 				}
 				open();
 				if(kolkart==8)alert("Вы выиграли");
-				open();
 			}
 			
 			
@@ -356,7 +369,7 @@ div{
 				mas[i].setAttribute('name',Block.className);
 				Block.appendChild(mas[i]);}
 			}
-			Proverka(Block);
+			//Proverka(Block);
 			}
 			
 			
@@ -370,7 +383,7 @@ div{
 			}
 			
 			
-			
+			flag=1;
 			function actionDOWN(obj){//функция передвижения карты
 			
 			if(obj.name=="1")n=0;
@@ -417,7 +430,7 @@ div{
 						rez=1;
 			}
 			}
-			}
+			};
 			
 			if(rez==1)return;
 			//end
@@ -462,6 +475,7 @@ div{
 					if(T[i].test(mas[number].src)||T2[i].test(mas[number].src)){
 					if(T[i+1].test(BlockId[l].children[BlockId[l].children.length-1].src)||T2[i+1].test(BlockId[l].children[BlockId[l].children.length-1].src)){
 					BackCard(BlockId[l],mas);flag=0;
+					Proverka(BlockId[l]);
 					}}}
 					
 			}
@@ -469,7 +483,7 @@ div{
 			
 			if(flag==0){
 				open();
-			}
+				}
 			if(flag==1){
 			for(i=number;i<k;i++){
 				mas[i].style.top=oldY[i];
@@ -479,6 +493,7 @@ div{
 			}}
 			//BackCard(BlockId[n],mas);}
 			}
+			
 			
 			for(i=number;i<k;i++)
 			mas[i].ondragstart = function() {

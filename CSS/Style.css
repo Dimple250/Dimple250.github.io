@@ -1,0 +1,20 @@
+body{
+	background-color:lightgreen;
+	//margin-left:10%;
+}
+img{
+	position:absolute;
+}
+div{
+	position:relative;
+	//border:1px solid green;
+	width:5px;
+	//margin-left:1%;
+	float:left;
+}
+#Add{
+	position:absolute;
+	width:80px;
+	top:500px;
+	left:1200px;
+}

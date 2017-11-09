@@ -1,28 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body{
-	background-color:lightgreen;
-	//margin-left:10%;
-}
-img{
-	position:absolute;
-}
-div{
-	position:relative;
-	//border:1px solid green;
-	width:5px;
-	//margin-left:1%;
-	float:left;
-}
-#Add{
-	position:absolute;
-	width:80px;
-	top:500px;
-	left:1200px;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="./CSS/Style.css">
 </head>
 <body>
 
@@ -194,7 +173,6 @@ div{
 				}
 				
 				
-				
 				Block1 = document.getElementById('block1');
 				Block2 = document.getElementById('block2');
 				Block3 = document.getElementById('block3');
@@ -292,7 +270,7 @@ div{
 					}
 					if(kol1==13){
 					q+=30;
-						for(m=num;m<Block.children.length;m){
+						for(m=num;m<=Block.children.length;m){
 							Block.children[Block.children.length-1].style.top=schet.style.top;
 							Block.children[Block.children.length-1].style.left=q+"px";
 							Block.children[Block.children.length-1].setAttribute('onmousedown','');
@@ -317,7 +295,7 @@ div{
 					}
 					if(kol2==13){
 					q+=30;
-						for(m=num;m<Block.children.length;m){
+						for(m=num;m<=Block.children.length;m){
 							Block.children[Block.children.length-1].style.top=schet.style.top;
 							Block.children[Block.children.length-1].style.left=q+"px";
 							Block.children[Block.children.length-1].setAttribute('onmousedown','');
